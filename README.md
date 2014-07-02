@@ -24,3 +24,7 @@ commit.asana-update = {PATH_TO asana-update.sh}
 
 ## Add the commit hook file:
 Download the commit hook file to the location in your home directory you specified in the .hgrc file.
+
+## Finished!
+
+Now every time you commit, if you simply add the asana ticket to the commit as a hashtag, it will add the commit message, changeset, and the list of files to a comment in the asana ticket. So for example, if you are working on issue 11986320132366... just add \#11986320132366 to the commit message and it will update the asana ticket.
