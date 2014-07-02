@@ -13,6 +13,9 @@ taskid_pattern='#([0-9]*)'
 
 # get the checkin comment for parsing
 summary=$(hg log -vr $HG_NODE | egrep -v '^(tag|parent|date|user|files):' | sed 's/^description:$//')
+
+#replace any & so it wont truncate the comment
+summary=${summary//&/%26}
 files=$(hg status --change $HG_NODE)
 
 comment="$summary
